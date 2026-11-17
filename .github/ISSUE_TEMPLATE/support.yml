@@ -1,0 +1,51 @@
+name: PaintHouse VR support report
+description: Report a reproducible game issue or share constructive feedback. All issues are publicly visible.
+title: "[PaintHouse VR] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Public support tracker for Hanmore Labs PaintHouse VR.**
+        Please do not post your name, email, account details, device serial number, passwords, private videos or any sensitive information. For local game-data deletion, follow the instructions at our [Support page](https://seanhanmore80-debug.github.io/hanmore-labs-painthouse-site/support.html). GitHub requires an account to post a report.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy reminder
+      options:
+        - label: I understand this support report is public and contains no personal or sensitive details.
+          required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type of report
+      options:
+        - Gameplay issue
+        - Visual issue
+        - Audio issue
+        - Controller interaction
+        - Performance or comfort
+        - Feature suggestion
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Game version
+      description: Please enter the version if visible (for example, 1.0.0). Do not include device IDs.
+      placeholder: "Version..."
+    validations:
+      required: false
+  - type: input
+    id: headset
+    attributes:
+      label: Quest headset model
+      placeholder: "Quest 3, Quest 3S, etc."
+  - type: textarea
+    id: steps
+    attributes:
+      label: What happened?
+      description: Steps to reproduce the issue and what you expected.
+      placeholder: "1. I grabbed... 2. I pressed... 3. The game..."
+    validations:
+      required: true
